@@ -203,8 +203,6 @@ const products = [
   
   // Mobile menu toggle function
 function toggleMenu() {
-  nav.classList.toggle("open");
-  overlay.classList.toggle("show");
   const mobileNav = document.getElementById('mobileNav');
   const overlay = document.getElementById('overlay');
 
@@ -219,8 +217,10 @@ document.getElementById('overlay').addEventListener('click', toggleMenu);
 document.querySelectorAll('.mobile-nav a').forEach(link => {
   link.addEventListener('click', toggleMenu);
 });
+
   
   // Initial display
   filterAndDisplay();
 
   
+
