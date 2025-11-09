@@ -1,4 +1,21 @@
 /* Reset some default styles */
+/* Desktop (default) */
+.container {
+  display: flex;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* stack elements vertically */
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1.5rem; /* smaller headings */
+  }
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -506,3 +523,4 @@
     color: #07286f !important;
     text-shadow: 3px 3px 12px rgba(7, 40, 111, 0.9) !important;
   }
+
