@@ -1,4 +1,27 @@
+
 /* ===== Reset & Base Styles ===== */
+/* Default Desktop */
+header h1 {
+  font-size: 3.5rem;
+  letter-spacing: 5px;
+}
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem; /* smaller than desktop */
+    letter-spacing: 3px;
+  }
+}
+
+/* Mobile phones (480px and below) */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5rem; /* fits small screens nicely */
+    letter-spacing: 2px;
+  }
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -468,3 +491,4 @@ nav a:hover::after {
     padding: 15px 10px;
   }
 }
+
