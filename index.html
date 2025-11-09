@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>School Supplies Shop</title>
+  <link rel="stylesheet" href="library.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Imprimbureau</h1>
+
+    <!-- Hamburger Icon (on the left) -->
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+    <!-- Background Overlay -->
+    <div id="overlay" class="overlay" onclick="toggleMenu()"></div>
+
+    <!-- Navigation Menu -->
+    <nav class="mobile-nav" id="mobileNav">
+      <div class="close-btn" onclick="toggleMenu()">✖</div>
+      <ul>
+        <li><a href="#home" onclick="toggleMenu()">Home</a></li>
+        <li><a href="#products" onclick="toggleMenu()">Products</a></li>
+        <li><a href="#categories" onclick="toggleMenu()">Categories</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Search Input -->
+    <input type="text" id="searchInput" placeholder="Search pens, erasers, markers..." />
+
+    <!-- Category Filters -->
+    <div id="categoryFilters" class="category-filters">
+      <button data-category="All" class="active">All</button>
+      <button data-category="Writing Tools">Writing Tools</button>
+      <button data-category="Accessories">Accessories</button>
+      <button data-category="Measuring Tools">Measuring Tools</button>
+      <!-- Add more categories here -->
+    </div>
+
+    <!-- Empty Category Section -->
+    <div class="category-content">
+      <!-- Category content goes here -->
+    </div>
+  </header>
+
+  <!-- Product List -->
+  <main id="product-list">
+    <!-- Products will be inserted by JavaScript -->
+  </main>
+
+  <!-- Product Detail Modal -->
+  <div id="productModal" class="modal">
+    <div class="modal-content">
+      <span id="closeModal" class="close">&times;</span>
+      <img id="modalImage" src="" alt="" />
+      <h2 id="modalName"></h2>
+      <p><strong>Brand:</strong> <span id="modalBrand"></span></p>
+      <p><strong>Category:</strong> <span id="modalCategory"></span></p>
+      <p id="modalDescription"></p>
+      <p><strong>Price:</strong> <span id="modalPrice"></span></p>
+    </div>
+  </div>
+
+  <!-- Footer Contact Section -->
+  <footer>
+    <div class="library-info" id="contact">
+      <h2>Contact Us</h2>
+      <p><strong>Address:</strong> Rue Amina Bint Wahb, 10150 Skhirate-Temara, Morocco</p>
+      <p><strong>Phone:</strong> +212 6 12 34 56 78</p>
+      <p><strong>Email:</strong> info@library.com</p>
+    </div>
+
+    <!-- Google Map Embed -->
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3320.602049269159!2d-6.87659428481544!3d33.81062008068064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7d24cc0e31d3f%3A0x9efefc5f062102e3!2sRue%20Amina%20Bint%20Wahb%2C%20Skhirat-Temara!5e0!3m2!1sen!2sma!4v1691199168397!5m2!1sen!2sma"
+        width="100%"
+        height="300"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+
+    <!-- Contact Form -->
+    <section class="contact-form-section">
+      <h2>Send us a message</h2>
+      <form id="contactForm">
+        <label for="name">Name:</label><br />
+        <input type="text" id="name" name="name" required /><br />
+
+        <label for="email">Email:</label><br />
+        <input type="email" id="email" name="email" required /><br />
+
+        <label for="message">Message:</label><br />
+        <textarea id="message" name="message" rows="4" required></textarea><br />
+
+        <button type="submit">Send</button>
+      </form>
+      <p id="formMessage"></p>
+    </section>
+  </footer>
+
+  <!-- JavaScript file -->
+  <script src="library.js"></script>
+</body>
+</html>
