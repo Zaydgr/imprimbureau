@@ -1,24 +1,5 @@
 
 /* ===== Reset & Base Styles ===== */
-/* Hamburger Icon */
-.hamburger {
-  display: none; /* hidden on desktop */
-  font-size: 28px;
-  cursor: pointer;
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  z-index: 1100;
-  background: #007bff;
-  color: white;
-  padding: 10px 15px;
-  border-radius: 6px;
-  transition: background 0.3s ease;
-}
-
-.hamburger:hover {
-  background: #0056b3;
-}
 
 /* Mobile Navigation Menu */
 .mobile-nav {
@@ -436,21 +417,6 @@ nav a:hover::after {
   transform: scaleX(1);
 }
 
-/* ===== Hamburger & Mobile Nav ===== */
-.hamburger {
-  display: none;
-  font-size: 28px;
-  cursor: pointer;
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  z-index: 1001;
-  background: #007bff;
-  color: white;
-  padding: 10px 15px;
-  border-radius: 6px;
-}
-
 .mobile-nav {
   position: fixed;
   top: 0;
@@ -543,10 +509,6 @@ nav a:hover::after {
     display: none;
   }
 
-  .hamburger {
-    display: block;
-  }
-
   .product {
     width: 45%;
   }
@@ -583,5 +545,6 @@ nav a:hover::after {
     padding: 15px 10px;
   }
 }
+
 
 
