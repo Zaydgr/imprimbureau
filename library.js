@@ -202,11 +202,23 @@ const products = [
   });
   
   // Mobile menu toggle function
-  function toggleMenu() {
-    nav.classList.toggle("open");
-    overlay.classList.toggle("show");
-  }
+function toggleMenu() {
+  const mobileNav = document.getElementById('mobileNav');
+  const overlay = document.getElementById('overlay');
+
+  mobileNav.classList.toggle('open');
+  overlay.classList.toggle('show');
+}
+
+// Close menu if overlay clicked
+document.getElementById('overlay').addEventListener('click', toggleMenu);
+
+// Close menu if a link inside mobile nav is clicked
+document.querySelectorAll('.mobile-nav a').forEach(link => {
+  link.addEventListener('click', toggleMenu);
+});
   
   // Initial display
   filterAndDisplay();
+
   
